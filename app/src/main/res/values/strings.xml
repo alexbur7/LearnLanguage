@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LearnLanguage</string>
+    <string name="Login">Вход</string>
+    <string name="Registration">Регистрация</string>
+    <string name="Registration2">Зарегестрироваться</string>
+    <string name="EnterPass">Пароль</string>
+    <string name="EnterEmail">Почта</string>
+    <string name="Body">Тело</string>
+    <string name="Whether">Погода</string>
+    <string name="Bug">Насекомые</string>
+    <string name="Food">Еда</string>
+    <string name="back">Назад</string>
+    <string name="next">Следующий</string>
+    <string name="true_answer">Вы ответили верно</string>
+</resources>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgr"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="327dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginBottom="13dp"
+        android:background="#BA4C4A4A"
+        android:backgroundTint="#4C4A4A"
+        android:ems="10"
+        android:hint="  Почта"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/edtPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtComp" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="327dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="111dp"
+        android:background="#4C4A4A"
+        android:backgroundTint="#C34C4A4A"
+        android:ems="10"
+        android:hint="  Пароль"
+        android:inputType="textPassword"
+        android:textColorHint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/LogBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+
+    <Button
+        android:id="@+id/LogBtn"
+        android:layout_width="327dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="1dp"
+        android:backgroundTint="#FF0000"
+        android:onClick="onClick"
+        android:text="@string/Login"
+        android:textColor="#000000"
+        app:iconTint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/RegBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+
+    <Button
+        android:id="@+id/RegBtn"
+        android:layout_width="327dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="143dp"
+        android:backgroundTint="#FD0000"
+        android:onClick="onClick"
+        android:text="@string/Registration"
+        android:textColor="#000000"
+        app:iconTint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/TGbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LogBtn" />
+
+    <TextView
+        android:id="@+id/txtComp"
+        android:layout_width="348dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="11dp"
+        android:text="LearnLanguage"
+        android:textAlignment="center"
+        android:textColor="#A1000000"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edtEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <ImageView
+        android:id="@+id/VKbtn"
+        android:layout_width="56dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="60dp"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/TGbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RegBtn"
+        app:srcCompat="@drawable/vk" />
+
+    <ImageView
+        android:id="@+id/TGbtn"
+        android:layout_width="56dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="72dp"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/INSTbtn"
+        app:layout_constraintStart_toEndOf="@+id/VKbtn"
+        app:layout_constraintTop_toBottomOf="@+id/RegBtn"
+        app:srcCompat="@drawable/telegram" />
+
+    <ImageView
+        android:id="@+id/INSTbtn"
+        android:layout_width="56dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="72dp"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TGbtn"
+        app:layout_constraintTop_toBottomOf="@+id/RegBtn"
+        app:srcCompat="@drawable/instagram" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="179dp"
+        android:layout_height="141dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="116dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtComp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/united_kingdom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

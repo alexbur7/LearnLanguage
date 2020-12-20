@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddDB">
+
+    <Button
+        android:id="@+id/AddDBbtn"
+        android:layout_width="234dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginBottom="50dp"
+        android:text="Добавить"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTopic" />
+
+    <EditText
+        android:id="@+id/edtTranWord"
+        android:layout_width="332dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:hint="Англ. Слово"
+        android:inputType="textPersonName"
+        android:textColorHint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/edtTrueWord"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtTrueWord"
+        android:layout_width="332dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:hint="Перевод"
+        android:inputType="textPersonName"
+        android:textColorHint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/edtFalseWord1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTranWord" />
+
+    <EditText
+        android:id="@+id/edtFalseWord1"
+        android:layout_width="332dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:hint="Ошиб. слово 1"
+        android:inputType="textPersonName"
+        android:textColorHint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/edtFalseWord2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTrueWord" />
+
+    <EditText
+        android:id="@+id/edtFalseWord2"
+        android:layout_width="332dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:hint="Ошиб. слово 2"
+        android:inputType="textPersonName"
+        android:textColorHint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/edtFalseWord3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtFalseWord1" />
+
+    <EditText
+        android:id="@+id/edtFalseWord3"
+        android:layout_width="332dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:hint="Ошиб. слово 3"
+        android:inputType="textPersonName"
+        android:textColorHint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/edtTopic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtFalseWord2" />
+
+    <EditText
+        android:id="@+id/edtTopic"
+        android:layout_width="332dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:hint="Тема"
+        android:inputType="textPersonName"
+        android:textColorHint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/AddDBbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtFalseWord3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
