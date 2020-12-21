@@ -3,9 +3,11 @@ package com.example.learnlanguage;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.room.Room;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,9 +31,10 @@ public class TestFragment extends Fragment {
     private Next next;
     private int topic;
 
-    public TestFragment(int position, int topic){
+    public TestFragment(int position, int topic, List<Words> words){
         this.position = position;
         this.topic = topic;
+        this.words =words;
     }
 
     @Override
@@ -66,7 +69,6 @@ public class TestFragment extends Fragment {
     }
 
     private void initView() {
-        words = MainActivity.newDatabase().getWordsDao().getWordsTopic(topic);
         transWord.setText(words.get(position).TransWord);
         List<String> translateWords = randomWords();
         buttonAnswer1.setText(translateWords.get(0));

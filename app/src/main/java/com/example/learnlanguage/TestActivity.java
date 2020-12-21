@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.room.Room;
 
 import java.util.List;
 
@@ -16,40 +17,31 @@ public class TestActivity extends SingleFragmentActivity implements TestFragment
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         code = getIntent().getIntExtra(BodyActivity.BODY_CODE, -1);
-        words = MainActivity.newDatabase().getWordsDao().getWordsTopic(code);
+        words = Room.databaseBuilder(this , WordsDatabase.class , "Words.db").allowMainThreadQueries().build().getWordsDao().getWordsTopic(code);
+        super.onCreate(savedInstanceState);
     }
 
     @Override
     public Fragment createFragment(int position) {
-        return new TestFragment(position, code);
+        return new TestFragment(position, code,words);
     }
 
     @Override
     public void nextQuestion() {
         if (position<words.size()-1) {
             position++;
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new TestFragment(position,code)).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new TestFragment(position,code,words)).commit();
         }
-        else position=0;
+        else {position=0;
+        exitTest();}
     }
 
     @Override
     public void exitTest() {
-        Intent intent;
-        if (code==0) {
-            intent = new Intent(this, BodyActivity.class);
-        }
-        else if (code==1){
-            intent = new Intent(this,FoodActivity.class);
-        }
-        else if (code==2){
-            intent = new Intent(this,WhetherActivity.class);
-        }
-        else {
-            intent = new Intent(this,RegActivity.class);
-        }
+
+        Intent intent = new Intent(this,BodyActivity.class);
+        intent.putExtra(BodyActivity.BODY_CODE,code);
         startActivity(intent);
     }
 

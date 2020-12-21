@@ -23,18 +23,22 @@ public class Activity2 extends AppCompatActivity implements View.OnClickListener
         switch (v.getId()) {
             case R.id.BodyBtn:
                 Intent intent3 = new Intent(this, BodyActivity.class);
+                intent3.putExtra(BodyActivity.BODY_CODE,1);
                 startActivity(intent3);
                 break;
             case R.id.WhetherBtn:
-                Intent intent4 = new Intent(this, WhetherActivity.class);
+                Intent intent4 = new Intent(this, BodyActivity.class);
+                intent4.putExtra(BodyActivity.BODY_CODE,4);
                 startActivity(intent4);
                 break;
             case R.id.BugBtn:
-                Intent intent5 = new Intent(this, BugActivity.class);
+                Intent intent5 = new Intent(this, BodyActivity.class);
+                intent5.putExtra(BodyActivity.BODY_CODE, 2);
                 startActivity(intent5);
                 break;
             case R.id.FoodBtn:
-                Intent intent7 = new Intent(this, FoodActivity.class);
+                Intent intent7 = new Intent(this, BodyActivity.class);
+                intent7.putExtra(BodyActivity.BODY_CODE, 3);
                 startActivity(intent7);
                 break;
             case R.id.Grammar:

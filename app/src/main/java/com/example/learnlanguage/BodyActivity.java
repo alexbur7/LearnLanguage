@@ -17,7 +17,7 @@ public class BodyActivity extends AppCompatActivity {
     private RecyclerView rvBodyW;
     private Button testButton;
     private Button backButton;
-    private int code = 0;
+    private int code;
     public static final String BODY_CODE = "body_code";
 
 
@@ -27,7 +27,7 @@ public class BodyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_body);
         getSupportActionBar().hide();
-
+        code = getIntent().getIntExtra(BODY_CODE, -1);
         words = Room.databaseBuilder(this , WordsDatabase.class , "Words.db").allowMainThreadQueries().build().getWordsDao().getWordsTopic(code);
 
         rvBodyW = findViewById(R.id.rvWords);
